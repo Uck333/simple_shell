@@ -1,5 +1,5 @@
-#ifndef _header_shell_h_
-#define _header_shell_h_
+#ifndef _SHELLHEADER_H_
+#define _SHELLHEADER_H_
 
 #include <sys/types.h>
 #include <string.h>
@@ -11,9 +11,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-void shell_command_executer(char *k);
+
+void shell_command_executer(const char *);
 void display_shell_prompt(void);
-int built_putchar(char k);
+int built_putchar(char);
 void built_printf(char *k);
 int shell_mode_interactive(mode_t *mode);
 int alphabet_check(int k);

@@ -1,4 +1,4 @@
-#include "shell_header.h"
+#include "shellheader.h"
 
 /**
  * shell_command_executer - executes the shell prompt
@@ -8,7 +8,7 @@
  * Return: nothing
  */
 
-void shell_command_executer(char *k)
+void shell_command_executer(const char *shell_command)
 {
 	pid_t my_child_pid = fork();
 

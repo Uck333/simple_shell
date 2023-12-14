@@ -1,5 +1,4 @@
-#include "shell_header.h"
-#include <stdio.h>
+#include "shellheader.h"
 
 /**
  * main - Entry point
@@ -10,13 +9,19 @@
 
 int main(void)
 {
-	char shell_command[200];
+	/* const char shell_command[200]; */
+	char a = '1';
 
-	while (1)
-	{
-		display_shell_prompt();
-		shell_command_executer(shell_command);
-		take_user_input(shell_command, sizeof(shell_command));
-	}
+	built_putchar(a);
+	built_putchar('\n');
+
+	/**
+	 * while (1)
+	 * {
+	 * display_shell_prompt();
+	 * shell_command_executer(shell_command);
+	 * take_user_input(shell_command, sizeof(shell_command));
+	 * }
+	 */
 	return (0);
 }
