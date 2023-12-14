@@ -20,5 +20,6 @@ int shell_mode_interactive(mode_t *mode);
 int alphabet_check(int k);
 int delimiter_check(char k, char *string_checked);
 int built_atoi(char *k);
+void take_user_input(char *, size_t);
 
 #endif

@@ -12,16 +12,16 @@ void shell_command_executer(const char *shell_command)
 {
 	pid_t my_child_pid = fork();
 
-	if (my_child_pid == -1)
-	{
-		perror("error from forking");
-		exit(-1);
-	}
-	else if (my_child_pid == 0)
+	if (my_child_pid == 0)
 	{
 		execlp(shell_command, shell_command, (char *)NULL);
 		perror("error from execlp");
-		exit(-1);
+		exit(EXIT_FAILURE);
+	}
+	else if (my_child_pid == -1)
+	{
+		perror("error from forking");
+		exit(EXIT_FAILURE);
 	}
 	else
 	{

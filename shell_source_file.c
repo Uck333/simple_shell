@@ -9,19 +9,13 @@
 
 int main(void)
 {
-	/* const char shell_command[200]; */
-	char a = '1';
+	char shell_command[200];
 
-	built_putchar(a);
-	built_putchar('\n');
-
-	/**
-	 * while (1)
-	 * {
-	 * display_shell_prompt();
-	 * shell_command_executer(shell_command);
-	 * take_user_input(shell_command, sizeof(shell_command));
-	 * }
-	 */
+	while (1)
+	{
+		display_shell_prompt();
+		take_user_input(shell_command, sizeof(shell_command));
+		shell_command_executer(shell_command);
+	}
 	return (0);
 }
