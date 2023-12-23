@@ -12,9 +12,9 @@
 
 void take_user_input(char *shell_command, size_t shell_command_size)
 {
-	while (fgets(shell_command, shell_command_size, (FILE *)0) == NULL)
+	while (fgets(shell_command, shell_command_size, stdin) == NULL)
 	{
-		if (feof((FILE *)0))
+		if (feof(stdin))
 		{
 			built_putchar('\n');
 			exit(0);
